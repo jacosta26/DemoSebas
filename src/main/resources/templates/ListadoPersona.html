@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>SEBAS ACOSTA MECA</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'LISTADO DE PERSONAS'" />
+    <table>
+    	<th:block th:each="per : ${personas}">
+    		<tr>
+	    		<td th:text="${per.idPersona}"></td>
+	    		<td th:text="${per.nombres}"></td>
+	    		<td th:text="${per.apellidoPaterno}"></td>
+	    		<td th:text="${per.apellidoMaterno}"></td>
+    		</tr>
+    	</th:block>
+    </table>
+</body>
+</html>
